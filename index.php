@@ -1,48 +1,27 @@
 <?php
-    $matches = [
-        "squadraDiCasa" => [
-            "squadra1" => "Olimpia Milano",
-            "squadra2" => "Bologna",
-            "squadra3" => "Cremona"
-        ],
-        "squadraOspite" => [
-            "squadra1" => "Cantù",
-            "squadra2" => "Dinamo Sassari",
-            "squadra3" => "Varese"
-        ],
-        "puntiSquadraCasa" => [
-            "squadra1" => "70",
-            "squadra2" => "97",
-            "squadra3" => "88"
-        ],
-        "puntiSquadraOspite" => [
-            "squadra1" => "78",
-            "squadra2" => "90",
-            "squadra3" => "96"
-        ],
-    ];
+    $name = $_GET["name"];
+    $mail = $_GET["mail"];
+    $age = $_GET["age"];
 ?>
 
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
     <head>
         <meta charset="utf-8">
-        <title>PHP Snack 1</title>
+        <title>PHP Snack 2</title>
     </head>
     <body>
-        <h1>Basket Serie A</h1>
-        <h3>Ultime partite giocate.</h3>
+        <h1>Check User</h1>
 
-        <p>
-            <?php echo $matches["squadraDiCasa"]["squadra1"];?> - <?php echo $matches["squadraOspite"]["squadra1"];?> | <?php echo $matches["puntiSquadraCasa"]["squadra1"];?> - <?php echo $matches["puntiSquadraOspite"]["squadra1"];?>
-        </p>
+        <p style="color:red">Path verificato: /?name=Selva&mail=g@gmail.com&age=14</p>
+        <?php
+            if (strlen($name) > 3 && is_numeric($age) && strpos($mail, '.') !== false && strpos($mail, '@') !== false) {
+                echo "Accesso riuscito!";
+            }
+            else {
+                echo "Accesso negato!";
+            }
+        ?>
 
-        <p>
-            <?php echo $matches["squadraDiCasa"]["squadra2"];?> - <?php echo $matches["squadraOspite"]["squadra2"];?> | <?php echo $matches["puntiSquadraCasa"]["squadra2"];?> - <?php echo $matches["puntiSquadraOspite"]["squadra2"];?>
-        </p>
-
-        <p>
-            <?php echo $matches["squadraDiCasa"]["squadra3"];?> - <?php echo $matches["squadraOspite"]["squadra3"];?> | <?php echo $matches["puntiSquadraCasa"]["squadra3"];?> - <?php echo $matches["puntiSquadraOspite"]["squadra3"];?>
-        </p>
     </body>
 </html>
