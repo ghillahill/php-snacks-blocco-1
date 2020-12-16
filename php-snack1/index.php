@@ -54,17 +54,6 @@
     <body>
         <h1>Basket Serie A</h1>
         <h3>Ultime partite giocate.</h3>
-
-        <p>
-            <?php echo $matches["squadraDiCasa"]["squadra1"];?> - <?php echo $matches["squadraOspite"]["squadra1"];?> | <?php echo $matches["puntiSquadraCasa"]["squadra1"];?> - <?php echo $matches["puntiSquadraOspite"]["squadra1"];?>
-        </p>
-
-        <p>
-            <?php echo $matches["squadraDiCasa"]["squadra2"];?> - <?php echo $matches["squadraOspite"]["squadra2"];?> | <?php echo $matches["puntiSquadraCasa"]["squadra2"];?> - <?php echo $matches["puntiSquadraOspite"]["squadra2"];?>
-        </p>
-
-        <p>
-            <?php echo $matches["squadraDiCasa"]["squadra3"];?> - <?php echo $matches["squadraOspite"]["squadra3"];?> | <?php echo $matches["puntiSquadraCasa"]["squadra3"];?> - <?php echo $matches["puntiSquadraOspite"]["squadra3"];?>
         </p>
     </body>
 </html>
