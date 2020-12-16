@@ -1,26 +1,48 @@
 <?php
     $matches = [
-        "squadraDiCasa" => [
-            "squadra1" => "Olimpia Milano",
-            "squadra2" => "Bologna",
-            "squadra3" => "Cremona"
+        [
+            'squadraDiCasa' => [
+                'nome' => 'Olimpia Milano',
+                'punteggio' => 70
+            ],
+            'squadraOspite' => [
+                'nome' => 'Cantù',
+                'punteggio' => 84
+            ]
         ],
-        "squadraOspite" => [
-            "squadra1" => "Cantù",
-            "squadra2" => "Dinamo Sassari",
-            "squadra3" => "Varese"
+        [
+            'squadraDiCasa' => [
+                'nome' => 'Bologna',
+                'punteggio' => 97
+            ],
+            'squadraOspite' => [
+                'nome' => 'Dinamo Sassari',
+                'punteggio' => 90
+            ]
         ],
-        "puntiSquadraCasa" => [
-            "squadra1" => "70",
-            "squadra2" => "97",
-            "squadra3" => "88"
-        ],
-        "puntiSquadraOspite" => [
-            "squadra1" => "78",
-            "squadra2" => "90",
-            "squadra3" => "96"
+        [
+            'squadraDiCasa' => [
+                'nome' => 'Cremona',
+                'punteggio' => 88
+            ],
+            'squadraOspite' => [
+                'nome' => 'Varese',
+                'punteggio' => 96
+            ]
         ],
     ];
+
+    for ($i = 0; $i < count($matches); $i++) {
+
+        $nome_squadra_casa = $matches[$i]['squadraDiCasa']['nome'];
+        $nome_squadra_ospite = $matches[$i]['squadraOspite']['nome'];
+        $punteggio_squadra_casa = $matches[$i]['squadraDiCasa']['punteggio'];
+        $punteggio_squadra_ospite = $matches[$i]['squadraOspite']['punteggio'];
+        $squadre = $nome_squadra_casa . " - " . $nome_squadra_ospite;
+        $punti = $punteggio_squadra_casa . " - " . $punteggio_squadra_ospite;
+
+        echo $squadre . " | " . $punti . "<br>";
+    }
 ?>
 
 <!DOCTYPE html>
